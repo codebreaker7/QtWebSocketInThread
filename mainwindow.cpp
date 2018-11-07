@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "websocketrunnable.h"
 
 #include <QThreadPool>
 
@@ -20,12 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
 void MainWindow::sendRequest() {
     if (ui->threadRadioButton->isChecked()) {
         emit operate("ws://echo.websocket.org", ui->textToSendEdit->text());
-    } else if (ui->runnableRadioButton->isChecked()) {
-        WebSocketRunnable * runnable = new WebSocketRunnable();
-        runnable->setUrl("ws://echo.websocket.org");
-        runnable->setMessage(ui->textToSendEdit->text());
-        connect(runnable, &WebSocketRunnable::responseReady, this, &MainWindow::showResponseRunnable);
-        QThreadPool::globalInstance()->start(runnable);
+    } else  {
+
     }
 }
 

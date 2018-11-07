@@ -48,16 +48,6 @@
           <property name="text">
            <string>Thread</string>
           </property>
-          <attribute name="buttonGroup">
-           <string notr="true">buttonGroup</string>
-          </attribute>
-         </widget>
-        </item>
-        <item>
-         <widget class="QRadioButton" name="runnableRadioButton">
-          <property name="text">
-           <string>Runnable</string>
-          </property>
           <property name="checked">
            <bool>true</bool>
           </property>

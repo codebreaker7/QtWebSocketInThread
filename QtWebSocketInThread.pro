@@ -15,11 +15,9 @@ CCFLAG += -std=c++11
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    websocketworker.cpp \
-    websocketrunnable.cpp
+    websocketworker.cpp
 
 HEADERS  += mainwindow.h \
-    websocketworker.h \
-    websocketrunnable.h
+    websocketworker.h
 
 FORMS    += mainwindow.ui
